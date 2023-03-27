@@ -1,19 +1,21 @@
 import { Button } from 'antd'
 
 interface Props {
-    onLogout: Function
+    // onLogout: Function
 }
-export function Home({ onLogout }: Props) {
+export function Home() {
 
-    const handleLogout = () => {
-        sessionStorage.removeItem('appToken')
-        onLogout()
+    // const handleLogout = () => {
+    //     sessionStorage.removeItem('appToken')
+    //     onLogout()
 
-    }
+    // }
 
     return <>
         <h1>Home</h1>
-        <Button onClick={handleLogout}>Logout</Button>
+        <Button
+        // s onClick={handleLogout}
+        >Logout</Button>
     </>
 
 }

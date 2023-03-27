@@ -1,7 +1,8 @@
 import { useState, useCallback } from 'react'
 import { useRoutes } from "react-router-dom";
 
-import { Home, Login, Register, NotFound, NotPermitted } from './pages';
+import { Navigation } from './components'
+import { Home, Login, Register, NotFound, NotPermitted, Chat } from './pages';
 import { initiateInterceptors } from './utils'
 
 initiateInterceptors()
@@ -11,7 +12,7 @@ export default function App() {
   const [, updateState] = useState({});
   const forceUpdate = useCallback(() => updateState({}), []);
 
-  const isLoggedIn = !!sessionStorage.getItem('appToken')
+  const isLoggedIn = !!sessionStorage.getItem('appToken') || true
 
   console.log({ isLoggedIn })
 
@@ -30,20 +31,32 @@ export default function App() {
     }
   ]
 
+  if(!isLoggedIn) return useRoutes(authRoutes)
+
   const permittedRoutes = [
     {
       path: "/",
-      element: <Home onLogout={forceUpdate} />
-    },
-    {
-      path: "*",
-      element: <NotFound />
+      element: <Navigation onLogout={forceUpdate} />,
+      children: [
+        {
+          path: "/",
+          element: <Home />
+        },
+        {
+          path: "/chat",
+          element: <Chat />
+        },
+        {
+          path: "*",
+          element: <NotFound />
+        }
+      ]
     }
-  ]
+    ] 
+    
 
-  const currentRoutes = isLoggedIn ? permittedRoutes : authRoutes
 
-  const routes = useRoutes(currentRoutes);
+  return  useRoutes(permittedRoutes)
 
-  return routes
+ 
 }

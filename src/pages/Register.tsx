@@ -54,10 +54,10 @@ export const Register = () => {
                 <Form
                     name="login"
                     labelCol={{
-                        span: 8,
+                        span: 6,
                     }}
                     wrapperCol={{
-                        span: 16,
+                        span: 12,
                     }}
                     initialValues={{
                         remember: true,
@@ -140,8 +140,8 @@ export const Register = () => {
 
                     <Item
                         wrapperCol={{
-                            offset: 8,
-                            span: 16,
+                            offset: 6,
+                            span: 12,
                         }}
                     >
                         <Button type="primary" htmlType="submit" loading={loading} style={{ width: '100%' }}>

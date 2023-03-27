@@ -19,7 +19,7 @@ export const Login = ({ onLogin }: Props) => {
 
     const { trigger, response, loading, error } = useAxios({
         method: 'POST',
-        url: '/posts',
+        url: '/signin',
         headers: { // no need to stringify
             accept: '*/*'
         },
@@ -53,10 +53,10 @@ export const Login = ({ onLogin }: Props) => {
                 <Form
                     name="login"
                     labelCol={{
-                        span: 8,
+                        span: 6,
                     }}
                     wrapperCol={{
-                        span: 16,
+                        span: 12,
                     }}
                     initialValues={{
                         remember: true,
@@ -92,8 +92,8 @@ export const Login = ({ onLogin }: Props) => {
                     </Form.Item>
 
                     <Form.Item  wrapperCol={{
-                                offset: 12,
-                                span: 16,
+                                offset: 6,
+                                span: 8,
                             }}>
                         <Form.Item name="remember" valuePropName="checked" noStyle>
                             <Checkbox>Remember me</Checkbox>
@@ -106,8 +106,8 @@ export const Login = ({ onLogin }: Props) => {
 
                     <Form.Item
                         wrapperCol={{
-                            offset: 8,
-                            span: 16,
+                            offset: 6,
+                            span: 12,
                         }}
                     >
                         <Button type="primary" htmlType="submit" loading={loading} style={{ width: '100%' }}>
