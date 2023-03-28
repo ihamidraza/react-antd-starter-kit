@@ -4,7 +4,7 @@ This project was bootstrapped with [Vite](https://github.com/vitejs)  and [Ant D
 
 ## Purpose
 
-This project was designed to be starting for React application development. This project contains React authentication and chat features.
+This project was designed to be a starting point for React application development. This project has already implementation of React authentication and chat features.
 
 ## Available Scripts
 
