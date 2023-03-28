@@ -1,11 +1,10 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Vite](https://github.com/vitejs).
+This project was bootstrapped with [Vite](https://github.com/vitejs)  and [Ant Design](https://ant.design/).
 
 ## Purpose
 
 This project was designed to be starting for React application development. This project contains React authentication and chat features.
-Building blocks of [Ant Design](https://ant.design/) are used.
 
 ## Available Scripts
 
