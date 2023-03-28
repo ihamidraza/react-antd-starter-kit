@@ -5,6 +5,7 @@ This project was bootstrapped with [Vite](https://github.com/vitejs).
 ## Purpose
 
 This project was designed to be starting for React application development. This project contains React authentication and chat features.
+Building blocks of [Ant Design](https://ant.design/) are used.
 
 ## Available Scripts
 
@@ -25,8 +26,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Learn More
 
